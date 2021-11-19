@@ -1,6 +1,6 @@
 const express = require('express');
 
-const newConnection = require('./DBConnection');
+const newConnection = require('./DBconnection');
 
 const app = express();
 
