@@ -1,7 +1,5 @@
 const express = require('express');
-const path = require('path');
 
-//this object can be used to create new db connections 
 const newConnection = require('./DBConnection');
 
 const app = express();

@@ -1,4 +1,3 @@
-//this is where i will initialize the database
 
 const mysql = require('mysql');
 
@@ -11,7 +10,6 @@ let connection = mysql.createConnection({
 
 connection.connect();
 
-//if there are tables in place already then reset them
 connection.query(`Drop Table Times`
                 , (err,rows,fields) => 
                             {
@@ -30,7 +28,6 @@ connection.query(`Drop Table Users`
                                     console.log('Table Created');
                             })
 
-//init the time table with values that only the admin user can edit
 connection.query(`CREATE TABLE Times
             (
                 TimeSlot1 varchar(20),
@@ -52,7 +49,6 @@ connection.query(`CREATE TABLE Times
                     console.log('Table Created');
             })
 
-//the int data type is used to represent the true = 1 and false = 0
 
 connection.query(`CREATE TABLE Users
             (
